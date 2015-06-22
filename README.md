@@ -32,8 +32,8 @@ Make sure vim finds the vimrc file by either symlinking it:
 or by sourcing it from  your own ~/.vimrc:
 `source ~/.vim/vimrc
 
-install powerline
-https://powerline.readthedocs.org/en/latest/installation/osx.html#vim-installation
+install airline
+https://github.com/bling/vim-airline
 
 install fonts from
 https://github.com/powerline/fonts
