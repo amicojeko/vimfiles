@@ -30,4 +30,10 @@ Make sure vim finds the vimrc file by either symlinking it:
 `ln -s ~/.vim/vimrc ~/.vimrc`
 
 or by sourcing it from  your own ~/.vimrc:
-`source ~/.vim/vimrc`
+`source ~/.vim/vimrc
+
+install powerline
+https://powerline.readthedocs.org/en/latest/installation/osx.html#vim-installation
+
+install fonts from
+https://github.com/powerline/fonts

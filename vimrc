@@ -18,12 +18,12 @@ set number      "show line numbers
 
 "display tabs and trailing spaces
 set list
-set listchars=tab:▷⋅,trail:⋅,nbsp:⋅
+set listchars=tab:-⋅,trail:⋅,nbsp:⋅
 
 set incsearch   "find the next match as we type the search
 set hlsearch    "hilight searches by default
 
-set wrap        "dont wrap lines
+set nowrap        "dont wrap lines
 set linebreak   "wrap lines at convenient points
 
 if v:version >= 703
@@ -35,8 +35,8 @@ if v:version >= 703
 endif
 
 "default indent settings
-set shiftwidth=4
-set softtabstop=4
+set shiftwidth=2
+set tabstop=2
 set expandtab
 set autoindent
 
@@ -61,14 +61,15 @@ filetype plugin on
 filetype indent on
 
 "turn on syntax highlighting
-syntax on
+syntax enable
+colorscheme monokai
 
 "some stuff to get the mouse going in term
 set mouse=a
 set ttymouse=xterm2
 
 "tell the term has 256 colors
-set t_Co=256
+"set t_Co=256
 
 "hide buffers when not displayed
 set hidden
@@ -242,14 +243,7 @@ function! s:Median(nums)
     endif
 endfunction
 
-"nerdtree settings
-let g:NERDTreeMouseMode = 2
-let g:NERDTreeWinSize = 40
 
-"explorer mappings
-nnoremap <f1> :BufExplorer<cr>
-nnoremap <f2> :NERDTreeToggle<cr>
-nnoremap <f3> :TagbarToggle<cr>
 
 "source project specific config files
 runtime! projects/**/*.vim
@@ -306,3 +300,16 @@ autocmd BufReadPost fugitive://*
   \   nnoremap <buffer> .. :edit %:h<CR> |
   \ endif
 
+"nerdtree settings
+let g:NERDTreeMouseMode = 2
+let g:NERDTreeWinSize = 40
+
+"explorer mappings
+nnoremap <f1> :BufExplorer<cr>
+nnoremap <f2> :NERDTreeToggle<cr>
+nnoremap <f3> :TagbarToggle<cr>
+
+"airline configuration
+let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#enabled = 1
+let g:airline_theme="molokai"
