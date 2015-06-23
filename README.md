@@ -37,3 +37,10 @@ https://github.com/bling/vim-airline
 
 install fonts from
 https://github.com/powerline/fonts
+
+Ensure your terminal is UTF-8 ready
+```
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
+export LANGUAGE=en_US.UTF-8
+```
