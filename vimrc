@@ -315,6 +315,7 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme="dark"
 
 "control p configuration
+"replace spaces with underscore
 let g:ctrlp_abbrev = {
     \ 'gmode': 't',
     \ 'abbrevs': [
@@ -325,6 +326,14 @@ let g:ctrlp_abbrev = {
         \ },
         \ ]
     \ }
+"speed up a bit changing the indexing
+let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup --hidden
+      \ --ignore .git
+      \ --ignore .svn
+      \ --ignore .hg
+      \ --ignore .DS_Store
+      \ --ignore "**/*.pyc"
+      \ -g ""'
 
 "ultisnips configuration
 
