@@ -300,6 +300,9 @@ autocmd BufReadPost fugitive://*
   \   nnoremap <buffer> .. :edit %:h<CR> |
   \ endif
 
+"Remove trailing spaces after save
+autocmd BufWritePre * :%s/\s\+$//e
+
 "nerdtree settings
 let g:NERDTreeMouseMode = 2
 let g:NERDTreeWinSize = 40
