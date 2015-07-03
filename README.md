@@ -38,6 +38,9 @@ https://github.com/bling/vim-airline
 install fonts from
 https://github.com/powerline/fonts
 
+on mac, install the silver searcher
+`brew install the_silver_searcher`
+
 Ensure your terminal is UTF-8 ready
 ```
 export LC_ALL=en_US.UTF-8

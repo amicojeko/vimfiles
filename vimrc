@@ -336,6 +336,7 @@ let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup --hidden
       \ --ignore .hg
       \ --ignore .DS_Store
       \ --ignore "**/*.pyc"
+      \ --ignore "tmp/*"
       \ -g ""'
 
 "ultisnips configuration
@@ -345,5 +346,12 @@ let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
-" If you want :UltiSnipsEdit to split your window.
+"If you want :UltiSnipsEdit to split your window.
 let g:UltiSnipsEditSplit="vertical"
+
+"Clipboard
+com -range Cz :silent :<line1>,<line2>w !xsel -pbi
+ca cz Cz
+
+au InsertEnter * hi Normal ctermbg=232 guibg=#000000
+au InsertLeave * hi Normal ctermbg=235 guibg=#1b1d1e
